@@ -7,6 +7,7 @@ int op=0;
 printf("Enter your number: ");
 scanf("%d",&numbers[n]);
 n=n+1;// table has a numbers when user enters a new number it will be add new space in the table
+//------------------------------------------------
 while(1)// mean when the user input a number or operator is always true then go to the loop
   {
   scanf("%c",&operators[op]);
@@ -19,11 +20,19 @@ while(1)// mean when the user input a number or operator is always true then go 
 
   }
   return 0;// return the result
+  //----------------------------------------------
    for (int i = 0; i < op; i++)
    {
      if (operators[i]=='*'||operators[i]=='/')
      {
       numbers[i]=numbers[i]*numbers[i+1];
+       for (int j= i+1; j< n; j++)
+       {
+         numbers[i+1]=numbers[j+1];
+         n--;
+         op--;
+       }
+       
      }
      
    }

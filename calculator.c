@@ -1,4 +1,16 @@
 #include<stdio.h>
+int addition(int a,int b){
+  return a+b;
+}
+int substraction(int a,int b){
+  return a-b;
+}
+int multiplication(int a,int b){
+  return a*b;
+}
+int devision(int a,int b){
+  return a/b;
+}
 int main(){
 int numbers[100];
 char operators[100];
@@ -42,7 +54,7 @@ while(1)// mean when the user input a number or operator is always true then go 
         n--;
         op--;
         i--;
-       
+       // FAAAHHH
        
        
      }

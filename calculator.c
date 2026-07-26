@@ -37,7 +37,7 @@ while(1)// mean when the user input a number or operator is always true then go 
    {
      if (operators[i]=='*'||operators[i]=='/')
      {
-      numbers[i]=numbers[i]*numbers[i+1];
+      multiplication(numbers[i],numbers[i+1]);
        for (int j= i+1; j<n; j++)
        {
          

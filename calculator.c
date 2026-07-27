@@ -2,13 +2,13 @@
 int addition(int a,int b){
   return a+b;
 }
-int substraction(int a,int b){
+int subtraction(int a,int b){
   return a-b;
 }
 int multiplication(int a,int b){
   return a*b;
 }
-int devision(int a,int b){
+int division(int a,int b){
   return a/b;
 }
 int main(){
@@ -22,7 +22,7 @@ n=n+1;// table has a numbers when user enters a new number it will be add new sp
 //------------------------------------------------
 while(1)// mean when the user input a number or operator is always true then go to the loop
   {
-  scanf("%c",&operators[op]);
+  scanf(" %c",&operators[op]);
     if(operators[op]=='='){
         break;// when it's = stop and out and directly return
     }
@@ -31,7 +31,7 @@ while(1)// mean when the user input a number or operator is always true then go 
     n=n+1;// add other space in num's table
 
   }
-  return 0;// return the result
+ 
   //----------------------------------------------
    for (int i = 0; i < op; i++)
    {
@@ -39,13 +39,24 @@ while(1)// mean when the user input a number or operator is always true then go 
      {
       if (operators[i]=='*')
       {
-      multiplication(numbers[i],numbers[i+1]);
+      numbers[i]=multiplication(numbers[i],numbers[i+1]);
       }
       if (operators[i]=='/')
       {
-        devision(numbers[i],numbers[i+1]);
+        numbers[i]=division(numbers[i],numbers[i+1]);
+      }}
+      if (operators[i]=='+'||operators[i]=='-')
+      {
+      if (operators[i]=='+')
+      {
+        numbers[i]=addition(numbers[i],numbers[i+1]);
+      }
+      if (operators[i]=='-')
+      {
+        numbers[i]=subtraction(numbers[i],numbers[i+1]);
       }
       
+      }
        for (int j= i+1; j<n; j++)
        {
          
@@ -62,11 +73,13 @@ while(1)// mean when the user input a number or operator is always true then go 
         n--;
         op--;
         i--;
-       // FAAAHHH
+     
        
        
      }
+     return 0;
+     
+     
+     
      
    }
-   
-}

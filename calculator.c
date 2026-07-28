@@ -63,6 +63,7 @@ while(1)// mean when the user input a number or operator is always true then go 
         op--;
         i--;
       }
+    }
       for (int i = 0; i < op; i++)
    {
       if (operators[i]=='+'||operators[i]=='-')
@@ -95,10 +96,11 @@ while(1)// mean when the user input a number or operator is always true then go 
        
        
      }
+     printf("Result: %d",numbers[0]);
      return 0;
      
      
      
      
    }
-  }
+  

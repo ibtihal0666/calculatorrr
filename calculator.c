@@ -43,6 +43,9 @@ while(1)// mean when the user input a number or operator is always true then go 
       }
       if (operators[i]=='/')
       {
+        if(numbers[i+1]==0){
+          printf("Error!");
+        }
         numbers[i]=division(numbers[i],numbers[i+1]);
       }
       
